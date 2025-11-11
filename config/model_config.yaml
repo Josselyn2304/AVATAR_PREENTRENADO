@@ -1,0 +1,19 @@
+model_architecture:
+  architecture: "3D Avatar Generation"
+stylegan3:
+  parameters:
+    resolution: 512
+    style_layers: 14
+    latent_dim: 512
+diffusion_model:
+  settings:
+    image_resolution: 512
+    output_mesh_resolution: 1024
+3DMM:
+  parameters:
+    ...
+training:
+  hyperparameters:
+    batch_size: 4
+    learning_rate: 0.0001
+    num_epochs: 100
